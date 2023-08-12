@@ -1,26 +1,22 @@
+// Only used for testing a submit button
 import React, { useState } from 'react';
+import {getSummonerInfo} from "../services/AppService";
 
 function FormComponent() {
-    const [inputText, setInputText] = useState('');
+    const [summonerName, setSummonerName] = useState('');
     const [responseText, setResponseText] = useState('');
 
     const handleInputChange = (event) => {
-        setInputText(event.target.value);
+        setSummonerName(event.target.value);
     };
 
     const handleSubmit = async () => {
-        // Make a request to the backend to process the input
-        const response = await fetch('/api/process-input', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ input: inputText }),
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            setResponseText(data.response);
+        try {
+            const response = await getSummonerInfo(summonerName);
+            setResponseText(response.response);
+        } catch (error) {
+            console.error('Error fetching summoner info:', error);
+            setResponseText('Error fetching summoner info');
         }
     };
 
@@ -28,7 +24,7 @@ function FormComponent() {
         <div>
             <input
                 type="text"
-                value={inputText}
+                value={summonerName}
                 onChange={handleInputChange}
             />
             <button onClick={handleSubmit}>Submit</button>
