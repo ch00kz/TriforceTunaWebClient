@@ -18,14 +18,11 @@ Service that makes the actual call to the Riot Games API
 
 @Service
 public class RiotGamesApiService {
-    private final String apiKey;
-    private final HttpHeaders headers;
     private final HttpEntity<?> entity;
 
     public RiotGamesApiService(@Value("${riot.api.key}") String apiKey) {
-        this.apiKey = apiKey;
-        this.headers = new HttpHeaders();
-        this.headers.set("X-Riot-Token", apiKey);
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("X-Riot-Token", apiKey);
         this.entity = new HttpEntity<>(headers);
     }
 
