@@ -27,7 +27,7 @@ function App() {
         <div className="app">
             <header className="header">
                 <h1 className="title">Z41N Gaming Analytics</h1>
-                <p className="subtitle">Get insights for competitive gaming</p>
+                <p className="subtitle">idk what im doing</p>
             </header>
             <main className="main">
                 <div className="search-container">
