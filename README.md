@@ -13,7 +13,8 @@ Lets make something...
 
 ## How to Build
 
-- Open IntelliJ and click Run (configuration is setup and ready)
+- BACKEND: Open IntelliJ and click Run (configuration is setup and ready)
+- FRONTEND: Open terminal > run `npm start` (may require an `npm install` beforehand)
 
 ## How it works:
 1.) Frontend Initialization: `index.js` entry point (Loads App.js)

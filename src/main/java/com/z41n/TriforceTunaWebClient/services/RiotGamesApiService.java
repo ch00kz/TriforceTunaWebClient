@@ -12,6 +12,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
+/*
+Service that makes the actual call to the Riot Games API
+ */
+
 @Service
 public class RiotGamesApiService {
     private final String apiKey;

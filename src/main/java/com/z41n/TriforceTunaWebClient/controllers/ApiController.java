@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/*
+Controller that handles frontend request.
+Request from frontend is sent here.
+ */
+
 @RestController
 public class ApiController {
     private final RiotGamesApiService riotGamesApiService;
