@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import axios from "axios";
+import axios from 'axios';
 import SummonerInfoComponent from './components/SummonerInfoComponent';
 import LeagueInfoComponent from './components/LeagueInfoComponent';
 
@@ -24,18 +24,29 @@ function App() {
     };
 
     return (
-        <div>
-            <h1>Z41N - Springboot/React RiotGames API System</h1>
-            <p>Please enter the summoner name below:</p>
-            <input
-                type="text"
-                value={summonerName}
-                onChange={(e) => setSummonerName(e.target.value)}
-            />
-            <button onClick={fetchAllData}>Search</button>
-
-            <SummonerInfoComponent summonerInfo={summonerInfo} />
-            <LeagueInfoComponent leagueInfo={leagueInfo} />
+        <div className="app">
+            <header className="header">
+                <h1 className="title">Z41N Gaming Analytics</h1>
+                <p className="subtitle">Get insights for competitive gaming</p>
+            </header>
+            <main className="main">
+                <div className="search-container">
+                    <p className="search-description">Please enter the summoner name below:</p>
+                    <div className="search-input">
+                        <input
+                            type="text"
+                            value={summonerName}
+                            onChange={(e) => setSummonerName(e.target.value)}
+                            placeholder="Summoner Name"
+                        />
+                        <button onClick={fetchAllData}>Search</button>
+                    </div>
+                </div>
+                <div className="data-container">
+                    <SummonerInfoComponent summonerInfo={summonerInfo} />
+                    <LeagueInfoComponent leagueInfo={leagueInfo} />
+                </div>
+            </main>
         </div>
     );
 }
