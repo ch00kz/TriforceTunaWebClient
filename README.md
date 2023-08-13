@@ -14,7 +14,7 @@ Lets make something...
 ## How to Build
 
 - BACKEND: Open IntelliJ and click Run (configuration is setup and ready)
-- FRONTEND: Open terminal > run `npm start` (may require an `npm install` beforehand)
+- FRONTEND: Open terminal > cd `frontend` > run `npm start` (may require an `npm install` beforehand)
 
 ## How it works:
 1.) Frontend Initialization: `index.js` entry point (Loads App.js)
