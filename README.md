@@ -13,8 +13,14 @@ Lets make something...
 
 ## How to Build
 
-- BACKEND: Open IntelliJ and click Run (configuration is setup and ready)
-- FRONTEND: Open terminal > cd `frontend` > run `npm start` (may require an `npm install` beforehand)
+- BACKEND:
+  - Open IntelliJ and click Run (configuration is setup and ready)
+- FRONTEND: 
+  - Open terminal > cd `frontend` > run `npm install`
+  - {UNIX ONLY}: Run `export RIOT_API_KEY=<your-api-key>` to store key locally and not in repo
+  - {WINDOWS}: Run `set RIOT_API_KEY=<your-api-key>` to store key locally and not in repo
+    - If this does not work, set one manually to your System Environment Variables
+  - Run `npm start`
 
 ## How it works:
 1.) Frontend Initialization: `index.js` entry point (Loads App.js)
