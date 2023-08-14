@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.z41n.TriforceTunaWebClient.TriforceTunaWebClientApplicat
+ ion
+
