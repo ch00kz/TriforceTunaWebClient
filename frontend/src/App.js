@@ -11,7 +11,7 @@ function App() {
 
     const fetchAllData = async () => {
         try {
-            // Responses are what we get from the backend vai ApiController
+            // Responses are what we get from the backend via ApiController
             const response = await axios.get(`/api/summoner-info?summonerName=${summonerName}`);
             setSummonerInfo(response.data);
             const leagueResponse = await axios.get(`/api/league-info?summonerName=${summonerName}`);
