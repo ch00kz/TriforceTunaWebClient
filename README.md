@@ -17,17 +17,18 @@ Lets make something...
   - {UNIX}: 
     - Run `mvn clean install`
     - `cd target`
-    - Run `java -jar TriforceTunaWebClient.jar`
+    - Run `nohup java -jar TriforceTunaWebClient-0.0.1-SNAPSHOT.jar > app.log 2>&1 &`
   - {WINDOWS}: 
     - Open IntelliJ and click Run (configuration is setup and ready)
 - FRONTEND: 
   - Open terminal > cd `frontend` > run `npm install`
   - {UNIX ONLY}: 
     - Run `export RIOT_API_KEY=<your-api-key>` to store key locally and not in repo
+    - Run `nohup npm start > frontend.log 2>&1 &` OR `npm start` (if you don't want it to stay running)
   - {WINDOWS}: 
     - Run `set RIOT_API_KEY=<your-api-key>` to store key locally and not in repo
     - If this does not work, set one manually to your System Environment Variables
-  - Run `npm start`
+    - Run `npm start`
 
 ## How it works:
 1.) Frontend Initialization: `index.js` entry point (Loads App.js)
